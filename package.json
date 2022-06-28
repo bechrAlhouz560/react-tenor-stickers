@@ -1,6 +1,7 @@
 {
   "name": "react-tenor-stickers",
   "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.4",
