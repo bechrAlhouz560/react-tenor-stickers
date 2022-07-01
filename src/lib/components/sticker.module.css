@@ -1,0 +1,207 @@
+:root {
+    --v-blue: #222832;
+    --v-blue-dark: #13161b;
+    --v-red: #F05655;
+    --v-transition: all cubic-bezier(0.36, 0.3, 0.14, 1.01) .3s;
+    --v-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    --v-shadow-1: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    --v-shadow-2: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    --v-shadow-3: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    --v-border: 1pt solid #eeeeee;
+    --v-white: white;
+}
+.stickers
+{
+    position: absolute;
+    background-color: var(--v-white);
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: var(--v-shadow);
+    gap: 10px;
+    
+}
+
+.categories
+{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex: 1;
+    place-content: space-between;
+    padding: 10px;
+    background: var(--v-white);
+    overflow-y: auto;
+    height: calc(100% - 71px);
+    margin-top: 10px;
+
+}
+
+.category
+{
+    width: 49%;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--v-blue);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category img
+{
+    position: absolute;
+    top: -50%;
+    opacity: .4;
+    transition: var(--v-transition);
+}
+
+.category span
+{
+    z-index: 1;
+    font-weight: bold;
+    color: white;
+}
+
+.category:hover img
+{
+    transform: scale(0.8);
+    box-shadow: var(--v-shadow-1);
+}
+
+.sticker-srch
+{
+    padding: 10px;
+    padding-bottom: 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.sticker-srch input
+{
+ flex: 1;
+}
+.gif-list {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+    
+
+    
+}
+.list {
+    display: flex;
+    grid-gap: 5px;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex: 1 0;
+    place-content: space-between;
+    padding: 10px;
+    
+}
+ .gif
+{
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+.gif img 
+{
+    width: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 3px;
+
+
+}
+
+@media screen and (max-width : 590px) {
+    .stickers
+    {
+        width: 100%;
+        right: 0px !important;
+        height: 80vh;
+    }
+    .gif img 
+    {
+        width: 110px;
+        padding: 1px;
+    }
+}
+
+
+
+@keyframes loading {
+    0% {
+        background: #eeeeee;
+    }
+
+    50% {
+        background: #c7c7c7;
+    }
+
+    100% {
+        background-color: #eeeeee;
+    }
+}
+
+.text-loading {
+    height: 10px;
+    border-radius: 10px;
+    animation-name: loading;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    width: 100%;
+}
+
+.btn-icon {
+
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
+    cursor: pointer;
+    transition: var(--v-transition);
+    color: var(--v-blue);
+}
+.btn-icon img {
+    width: 10px;
+}
+.btn-icon:hover {
+    background: #eeeeee;
+}
+
+
+.v-input {
+    border: 2pt solid #eeeeee;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 17px;
+    color: var(--v-blue);
+
+}
+
+.v-input:focus {
+    box-shadow: var(--v-shadow-2);
+    outline: none;
+    background-color: var(--v-red);
+    color: white;
+}
+
+.v-input::placeholder {
+    opacity: .5;
+}

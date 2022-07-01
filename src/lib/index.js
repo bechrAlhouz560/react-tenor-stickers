@@ -1,3 +1,3 @@
-
-import Badge from "./lib/components/Badge"
-export {Badge}
+import Sticker from './components/Sticker.jsx'
+import {StickerAPI} from './helpers'
+export {Sticker, StickerAPI}
